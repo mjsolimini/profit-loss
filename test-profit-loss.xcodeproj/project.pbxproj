@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		0DEB5F811EEF70190053B96D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB5F801EEF70190053B96D /* AppDelegate.swift */; };
-		0DEB5F831EEF70190053B96D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB5F821EEF70190053B96D /* ViewController.swift */; };
 		0DEB5F861EEF70190053B96D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB5F841EEF70190053B96D /* Main.storyboard */; };
 		0DEB5F881EEF70190053B96D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB5F871EEF70190053B96D /* Assets.xcassets */; };
 		0DEB5F8B1EEF70190053B96D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB5F891EEF70190053B96D /* LaunchScreen.storyboard */; };
+		0DEB5F941EEF70680053B96D /* AddTransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB5F921EEF70680053B96D /* AddTransViewController.swift */; };
+		0DEB5F951EEF70680053B96D /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB5F931EEF70680053B96D /* MoneyViewController.swift */; };
+		0DEB5F991EEF7AB50053B96D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB5F981EEF7AB50053B96D /* Transaction.swift */; };
+		0DEB5F9B1EEF7DC10053B96D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB5F9A1EEF7DC10053B96D /* TransactionCell.swift */; };
+		0DEB5F9E1EF1ADC00053B96D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB5F9D1EF1ADC00053B96D /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DEB5F7D1EEF70190053B96D /* test-profit-loss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-profit-loss.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEB5F801EEF70190053B96D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DEB5F821EEF70190053B96D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0DEB5F851EEF70190053B96D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DEB5F871EEF70190053B96D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DEB5F8A1EEF70190053B96D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DEB5F8C1EEF70190053B96D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DEB5F921EEF70680053B96D /* AddTransViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransViewController.swift; sourceTree = "<group>"; };
+		0DEB5F931EEF70680053B96D /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		0DEB5F981EEF7AB50053B96D /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		0DEB5F9A1EEF7DC10053B96D /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		0DEB5F9D1EF1ADC00053B96D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		0DEB5F7F1EEF70190053B96D /* test-profit-loss */ = {
 			isa = PBXGroup;
 			children = (
+				0DEB5F9C1EF1ADB10053B96D /* Services */,
 				0DEB5F801EEF70190053B96D /* AppDelegate.swift */,
-				0DEB5F821EEF70190053B96D /* ViewController.swift */,
+				0DEB5F921EEF70680053B96D /* AddTransViewController.swift */,
+				0DEB5F931EEF70680053B96D /* MoneyViewController.swift */,
+				0DEB5F9A1EEF7DC10053B96D /* TransactionCell.swift */,
+				0DEB5F981EEF7AB50053B96D /* Transaction.swift */,
 				0DEB5F841EEF70190053B96D /* Main.storyboard */,
 				0DEB5F871EEF70190053B96D /* Assets.xcassets */,
 				0DEB5F891EEF70190053B96D /* LaunchScreen.storyboard */,
 				0DEB5F8C1EEF70190053B96D /* Info.plist */,
 			);
 			path = "test-profit-loss";
+			sourceTree = "<group>";
+		};
+		0DEB5F9C1EF1ADB10053B96D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0DEB5F9D1EF1ADC00053B96D /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEB5F831EEF70190053B96D /* ViewController.swift in Sources */,
+				0DEB5F941EEF70680053B96D /* AddTransViewController.swift in Sources */,
+				0DEB5F9B1EEF7DC10053B96D /* TransactionCell.swift in Sources */,
+				0DEB5F991EEF7AB50053B96D /* Transaction.swift in Sources */,
+				0DEB5F9E1EF1ADC00053B96D /* DataService.swift in Sources */,
 				0DEB5F811EEF70190053B96D /* AppDelegate.swift in Sources */,
+				0DEB5F951EEF70680053B96D /* MoneyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
