@@ -25,7 +25,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
-        NotificationCenter.default.addObserver(self, selector: Selector(("onTransactionsLoaded:")), name: NSNotification.Name(rawValue: "transactionsLoaded"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onTransactionsLoaded(notif:)) , name: NSNotification.Name(rawValue: "transactionsLoaded"), object: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
