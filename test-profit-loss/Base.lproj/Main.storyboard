@@ -315,12 +315,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlM-hA-dkR">
+                                <rect key="frame" x="166" y="626" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="81S-bo-wKO" firstAttribute="leading" secondItem="Sek-Kn-aSu" secondAttribute="leading" id="DtU-Li-8UP"/>
                             <constraint firstItem="81S-bo-wKO" firstAttribute="top" secondItem="4ig-wH-7VI" secondAttribute="bottom" id="Rof-jR-72k"/>
                             <constraint firstAttribute="trailing" secondItem="81S-bo-wKO" secondAttribute="trailing" id="vYz-JX-9Ec"/>
+                            <constraint firstItem="DlM-hA-dkR" firstAttribute="centerX" secondItem="Sek-Kn-aSu" secondAttribute="centerX" id="xo1-Er-uqi"/>
+                            <constraint firstItem="SCH-Bu-Nyg" firstAttribute="top" secondItem="DlM-hA-dkR" secondAttribute="bottom" constant="20" id="yAp-Hr-pL4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -336,6 +344,7 @@
                         <outlet property="NotesBox" destination="3hY-qe-drb" id="vCl-rf-w9a"/>
                         <outlet property="NotesLbl" destination="YF6-mm-Ozs" id="F4P-zW-zA3"/>
                         <outlet property="NumberOfCups" destination="bof-44-xjB" id="7oW-6a-cpE"/>
+                        <outlet property="RevenueLbl" destination="DlM-hA-dkR" id="RuD-iV-W3B"/>
                         <outlet property="SegmentController" destination="16G-l9-bms" id="9lW-O5-T6j"/>
                         <outlet property="WhatWasExp" destination="5CH-H7-Gb6" id="lRa-cP-1yJ"/>
                     </connections>

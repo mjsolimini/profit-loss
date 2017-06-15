@@ -11,6 +11,7 @@ import CoreData
 
 class AddTransViewController: UIViewController {
 
+    @IBOutlet weak var RevenueLbl: UILabel!
     @IBOutlet weak var WhatWasExp: UILabel!
     @IBOutlet weak var ExpDesc: UITextField!
     @IBOutlet weak var ExpInput: UITextField!
@@ -75,7 +76,7 @@ class AddTransViewController: UIViewController {
     }
     
     @IBAction func HowMuchIsACup(_ sender: UIStepper) {
-        NumberOfCups.text = "$ \(String(sender.value))"
+        NumberOfCups.text = String(sender.value)
     }
     
     @IBAction func HowManyCupsStep(_ sender: UIStepper) {
@@ -88,14 +89,28 @@ class AddTransViewController: UIViewController {
     
     @IBAction func SaveTransaction(_ sender: Any) {
         
-        // two if statements below-one for expense, one for revenue
-        
-        //Revenue
-        if let classi = MainLbl.text, let desc = NotesBox.text , let amt = HowMuchCup.text {
-            let transaction = Transaction(Classification: classi, TransDescription: desc, Amount: amt)
-            DataService.instance.addTransaction(transaction: transaction)
-            dismiss(animated: true, completion: nil)
+        if SegmentController.selectedSegmentIndex == 0 {
+            //Revenue
+            if HowManyCupsNum.text != "" && NumberOfCups.text != "" {
+                guard let HowMany = HowManyCupsNum.text, let HowMuch = NumberOfCups.text else { return }
+                let Revenue = Double(HowMany)! * Double(HowMuch)!
+                RevenueLbl.text = "\(Revenue)"
+            }
+            
+            if let classi = MainLbl.text, let desc = NotesBox.text , let amt = RevenueLbl.text {
+                let transaction = Transaction(Classification: classi, TransDescription: desc, Amount: amt)
+                DataService.instance.addTransaction(transaction: transaction)
+                dismiss(animated: true, completion: nil)
+            }
+        } else {
+            //Expense
+            if let classi2 = MainLbl.text, let desc2 = ExpDesc.text , let amt2 = ExpInput.text {
+                let transaction = Transaction(Classification: classi2, TransDescription: desc2, Amount: amt2)
+                DataService.instance.addTransaction(transaction: transaction)
+                dismiss(animated: true, completion: nil)
+            }
         }
+        
     }
 
     

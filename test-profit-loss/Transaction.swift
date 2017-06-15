@@ -38,7 +38,7 @@ class Transaction: NSObject, NSCoding {
     
     required convenience init?(coder aDecoder: NSCoder) {
         self.init()
-        self._Classification = aDecoder.decodeObject(forKey: "Classificiation") as? String
+        self._Classification = aDecoder.decodeObject(forKey: "Classification") as? String
         self._TransDescription = aDecoder.decodeObject(forKey: "TransDescription") as? String
         self._Amount = aDecoder.decodeObject(forKey: "Amount") as? String
     }
